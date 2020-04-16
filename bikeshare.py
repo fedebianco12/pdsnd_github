@@ -194,9 +194,9 @@ def user_stats(df):
         max_bday_counter = sum(1 if x == max_bday else 0 for x in df["Birth Year"])
         print("The latest year of birth is {}, with {} occurrences.".format(int(max_bday), max_bday_counter))
 
-        common_bday = df["Birth Year"].mode()[0]
-        common_bday_counter = sum(1 if x == common_bday else 0 for x in df["Birth Year"] )
-        print("The most common year of birth is {}, with {} occurrences.".format(int(common_bday), common_bday_counter))
+        frequent_bday = df["Birth Year"].mode()[0]
+        frequent_bday_counter = sum(1 if x == frequent_bday else 0 for x in df["Birth Year"] )
+        print("The most common year of birth is {}, with {} occurrences.".format(int(frequent_bday), frequent_bday_counter))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
